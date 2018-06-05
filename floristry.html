@@ -1,0 +1,60 @@
+<div class="row">
+     <div class="col-sm-4">
+        <div class="form-field">
+            <label>Describe what kind of flowers you like (i.e. type & colour).
+            </label>
+            <textarea data-ng-model="task.category_question.flowersRequiredDescription" name="flowersRequiredDescription" required
+                      ng-class="{error : postTaskForm.flowersRequiredDescription.$invalid && postTaskForm.$submitted}"></textarea>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-field">
+            <label class="desk-hair">How would you like your arrangement presented?</label>
+            <select class="multipleSelection" required multiple="multiple"
+                    data-ng-model="task.category_question.arrangementPresentation" name="arrangementPresentation"
+                    ng-class="{error : postTaskForm.arrangementPresentation.$invalid && postTaskForm.$submitted}">
+                <option value="Invitations"> CUT FLOWERS GIFT WRAPPED (NO VASE)</option>
+                <option value="Banners or Posters">VASED FLOWERS</option>
+                <option value="Flyers">FLOWERS IN WICKER BASKET</option>
+                <option value="Place Setting names">CENTERPIECE</option>
+                <option value="Templates for presentations">PLANTS</option>
+                <option value="Other">ROSES</option>
+                <option value="Other">GIFT BASKET</option>
+                <option value="Other">FUNERAL</option>
+                <option value="Other">CHURCH</option>
+                <option value="Other">WEDDING</option>
+                <option value="Other">OTHER</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="form-field">
+            <label class="desk-hair">What price range are you looking at for your flowers?</label>
+            <div class="input-adjust">
+                <span class="place-ico">$</span>
+                <input type="number" class="form-control" data-ng-model="task.category_question.totalCost" name="totalCost"
+                       required min="1"
+                       ng-class="{error : postTaskForm.totalCost.$invalid && postTaskForm.$submitted}" />
+            </div>
+            <div class="input-adjust">
+                <select class="singleSelection" required data-ng-model="task.category_question.costType" name="costType"
+                        ng-class="{error : postTaskForm.costType.$invalid && postTaskForm.$submitted}">
+                    <option value="">PLEASE SELECT</option>
+                    <option value="per arrangement">PER ARRANGEMENT</option>
+                    <option value="Total">TOTAL</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <div class="form-field">
+            <label>
+                Do you have any other special requests for your arrangement?
+            </label>
+            <textarea data-ng-model="task.category_question.specialRequestDesc" name="specialRequestDesc" required
+                      ng-class="{error : postTaskForm.specialRequestDesc.$invalid && postTaskForm.$submitted}"></textarea>
+        </div>
+    </div>
+</div>

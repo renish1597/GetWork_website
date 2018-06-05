@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+	<html lang="en" data-ng-app="myapp">
+	<head>
+		<title>GetWork</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+				<!-- jQuery - required for Bootstrap JavaScript plugins -->
+				<script src="js/jquery.min.js"></script>
+		<!-- Bootstrap plug-in file -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Basic AngularJS-->
+		<script src="js/angular.js"></script>
+		<script src="js/signUp.js"></script>
+		<!-- HTML5 shiv and respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
+</head>
+<body data-ng-controller = "signupCtrl">
+		<div class="container-fluid">
+			<div class="row">
+					<div class="col-sm-4">
+						Logo
+					</div>
+					<div class="col-sm-8">
+							<button  class="collapsed navbar-toggle" data-target="#gt-navbar" data-toggle="collapse" type="button">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+							</button>
+							<nav class="home-nav navbar-collapse collapse" id="gt-navbar">
+									<ul class="nav navbar-nav">
+											<li><a href="aboutus.html">About US </a></li>
+											<li data-ng-show ="!isLogin"><a href="signup.html">Join</a></li>
+											<li data-ng-show="!isLogin">
+													<a id="dropdownMenu2" data-toggle="dropdown">Login <span class="caret"></span></a>
+													<ul class="dropdown-menu accountList">
+															<li><small>If you are a new user</small><a href = "signup.html">Register</a></li>
+															<li class="divider"></li>
+															<li>
+																	<a href = "login.html">Login</a>
+															</li>
+													</ul>
+											</li>
+									</ul>
+							</nav>
+					</div>
+			</div>
+	</div>
+	<div class="category-page text-center">
+		<div class="sub-banner">
+<!--				<img src="img/bg_.jpg">-->
+				<div class="container">
+						<h1 class="heading">Create an Account</h1>
+				</div>
+		</div>
+</div>
+	<div class="content-body">
+		<h1 >Sign Up Form</h1> <br/> <br/>
+
+		<label>Email ID :</label>
+		<input type="email" data-ng-model="user.email" required /> <br/> <br/>
+
+		<label>UserName :</label>
+		<input type="text" data-ng-model="user.userName" required/>
+		<br/> <br/>
+
+		<label>Password :</label>
+		<input type="password" data-ng-model="user.pass" required/>
+		<br/> <br/>
+
+		<label>I want to </label>
+
+		<input type="radio" data-ng-model="user.TaskType" value="post_Task" /> post a task
+		<input type="radio" data-ng-model="user.TaskType" value="complete_Task" /> browse a task <br/> <br/>
+		<input type="submit" value="Create Account" data-ng-click="createAccount()" />
+		{{message}}
+</div><br/> <br/>
+	<footer id="footer">
+			<div class="container">
+					<div class="footer-section footer-border-bottom">
+							<div class="row">
+									<div class="col-sm-2">
+											<h4 class="footer-title"><a href="#/how-it-works">How it works</a></h4>
+									</div>
+									<div class="col-sm-2">
+											<h4 class="footer-title"><a href="about-us">About Us</a></h4>
+									</div>
+									<div class="col-sm-2">
+										<h4 class="footer-title">Contact Us</h4>
+									</div>
+									<div class="col-sm-2">
+											<h4 class="footer-title">Categories</h4>
+									</div>
+									<div class="col-sm-4">
+											<h4 class="footer-title">Connect With Us</h4>
+											<div class="social_network">
+													<a href="http://instagram.com" target="_blank"><img src="img/instagram-icon.png"/> Instagram</a>
+													<a href="http://facebook.com" target="_blank"><img src="img/fb_icon.png"/> Facebook</a>
+											</div>
+									</div>
+							</div>
+					</div>
+			</div>
+	</footer>
+</body>
+</html>

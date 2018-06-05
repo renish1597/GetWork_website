@@ -1,0 +1,102 @@
+<div class="row">
+	<div class="col-sm-4">
+			<div class="form-field">
+					<label>Catering Checklist (tick one option)</label>
+					<select class="singleSelection" required data-ng-model="task.category_question.cateringType" id="cateringType"
+									name="cateringType" ng-class="{error : postTaskForm.cateringType.$invalid && postTaskForm.$submitted}">
+							<option value="">SELECT CATERING TYPE</option>
+							<option value="Cocktail/canapes">COCKTAIL/CANAPES</option>
+							<option value="Sit down dinner">SIT DOWN MEAL</option>
+							<option value="Buffet style – self serve">BUFFET STYLE – SELF SERVE</option>
+							<option value="Other">OTHER</option>
+					</select>
+
+			</div>
+	</div>
+	<div class="col-sm-4">
+			<div class="form-field">
+					<label>What Meal Would you like?</label>
+					<select class="singleSelection" required data-ng-model="task.category_question.mealType" name="mealType"
+									ng-class="{error : postTaskForm.mealType.$invalid && postTaskForm.$submitted}">
+							<option value="">SELECT MEAL TYPE</option>
+							<option value="Breakfast">BREAKFAST</option>
+							<option value="High Tea">HIGH TEA</option>
+							<option value="Lunch">LUNCH</option>
+							<option value="Dinner">DINNER</option>
+							<option value="Dessert">DESSERT</option>
+					</select>
+			</div>
+	</div>
+	<div class="col-sm-4">
+			<div class="form-field">
+					<label>Are you worried your Guests will be thirsty?	</label>
+					<select class="singleSelection" required data-ng-model="task.category_question.drinkType" name="drinkType"
+									ng-class="{error : postTaskForm.drinkType.$invalid && postTaskForm.$submitted}">
+							<option value="">SELECT DRINK TYPE</option>
+							<option value="No drinks, we have it covered">NO DRINKS, WE HAVE IT COVERED</option>
+							<option value="Non-alcoholic beverages only">NON-ALCOHOLIC BEVERAGES ONLY</option>
+							<option value="Alcoholic beverages – only house wine and beer">ALCOHOLIC BEVERAGES – ONLY HOUSE WINE AND BEER</option>
+							<option value="Alcoholic beverages – spirits included">ALCOHOLIC BEVERAGES – SPIRITS INCLUDED</option>
+					</select>
+			</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-4">
+			<div class="form-field">
+					<label class="desk-hair">Do you required waiting/service from us?</label>
+					<select class="singleSelection" required data-ng-model="task.category_question.waitingRequire"
+									name="waitingRequire"
+									ng-class="{error : postTaskForm.waitingRequire.$invalid && postTaskForm.$submitted}">
+							<option value="">SELECT WAITING</option>
+							<option value="Yes">YES</option>
+							<option value="No">NO</option>
+					</select>
+			</div>
+	</div>
+	<div class="col-sm-4">
+			<div class="form-field">
+					<label>Please list any dietary requirement you or your guests may have so we can accommodate to what you need:</label>
+					<textarea class="form-control" data-ng-model="task.category_question.dietaryRequirement" name="dietaryRequirement" required
+										ng-class="{error : postTaskForm.dietaryRequirement.$invalid && postTaskForm.$submitted}"></textarea>
+			</div>
+	</div>
+	 <div class="col-sm-4">
+			<div class="form-field">
+					<label class="desk-hair">Do you have any menu requests?	</label>
+					<textarea class="form-control" data-ng-model="task.category_question.menuRequests" name="menuRequests" required
+										ng-class="{error : postTaskForm.menuRequests.$invalid && postTaskForm.$submitted}"></textarea>
+			</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-4">
+			<div class="form-field">
+			<label>How many people will you be entertaining? </label>
+					<input type="number" class="form-control" ng-model="task.category_question.totalGuest" name="totalGuest" required
+								 ng-class="{error : postTaskForm.totalGuest.$invalid && postTaskForm.$submitted}">
+			</div>
+	</div>
+	<div class="col-sm-4">
+			<div class="form-field">
+					<label>How much would you like to spend?</label>
+
+					<div class="input-adjust">
+							<span class="place-ico">$</span>
+					<input type="number" class="form-control" ng-model="task.category_question.totalCost" name="totalCost"
+								 required
+								 ng-class="{error : postTaskForm.totalCost.$invalid && postTaskForm.$submitted}">
+					</div>
+					<div class="input-adjust">
+							<select class="singleSelection" required data-ng-model="task.category_question.costType" name="totalCostType"
+											ng-class="{error : postTaskForm.totalCostType.$invalid && postTaskForm.$submitted}">
+									<option value="">SELECT TYPE OF COST</option>
+									<option value="Per Person">PER PERSON</option>
+									<option value="Per Piece">PER PIECE</option>
+									<option value="Total">TOTAL</option>
+							</select>
+					</div>
+			</div>
+	</div>
+
+</div>

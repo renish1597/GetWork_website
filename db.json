@@ -1,0 +1,62 @@
+{
+  "posts": [
+    {
+      "Email": "qw@qw.com",
+      "Username": "re",
+      "Password": "re",
+      "id": 1
+    },
+    {
+      "Email": "renish@testing.com",
+      "Username": "test",
+      "Password": "test",
+      "id": 2
+    },
+    {
+      "Email": "test@test.com",
+      "Username": "admin",
+      "Password": "admin",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "task": [
+    {
+      "TaskTitle": "aSaA",
+      "TaskType": "Other",
+      "TaskDate": "asAS",
+      "TaskCategory": "Birthday",
+      "id": 1
+    },
+    {
+      "TaskTitle": "renish",
+      "TaskType": "Birthday",
+      "TaskDate": "2018-10-27T13:00:00.000Z",
+      "TaskCategory": "Wedding",
+      "id": 2
+    },
+    {
+      "TaskTitle": "Birthday Party",
+      "TaskType": "Birthday",
+      "TaskDate": "2018-06-05T14:00:00.000Z",
+      "TaskCategory": "Birthday",
+      "id": 3
+    },
+    {
+      "TaskTitle": "Test",
+      "TaskType": "Wedding",
+      "TaskDate": "2018-06-05T14:00:00.000Z",
+      "TaskCategory": "Birthday",
+      "id": 4
+    }
+  ]
+}
